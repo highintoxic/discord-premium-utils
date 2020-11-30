@@ -1,6 +1,6 @@
 # What is this?
 
-This is a simple Node.js package to see if a user is subscribed to Discord Nitro!
+A simple Node.js package to see if a user is subscribed to Discord Nitro!
 
 # Installation
 
