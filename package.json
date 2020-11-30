@@ -1,0 +1,26 @@
+{
+  "name": "discord-premium-utils",
+  "version": "1.0.0",
+  "description": "A simple Node.js package to see if a user is subscribed to Discord Nitro!",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thehackerboi69github/discord-premium-utils.git"
+  },
+  "keywords": [
+    "discord"
+  ],
+  "author": "thehackerboi69",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thehackerboi69github/discord-premium-utils/issues"
+  },
+  "homepage": "https://github.com/thehackerboi69github/discord-premium-utils#readme",
+  "dependencies": {
+    "discord.js": "^12.5.1"
+  }
+}
