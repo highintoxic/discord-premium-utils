@@ -1,18 +1,9 @@
-# What is this?
+/// <reference path="index.d.ts" />
 
-A simple Node.js package to see if a user is subscribed to Discord Nitro!
-
-# Installation
-
-`npm install discord-premium-utils`
-
-# Example
-
-```js
 import { Client } from "discord.js";
 import PremiumUtils from "discord-premium-utils";
 
-const client = new Client();
+const client: Client = new Client();
 
 client.once("ready", () => {
     console.log("Client is logged in!");
@@ -31,4 +22,3 @@ client.on("message", message => {
 });
 
 client.login("token");
-```

@@ -1,5 +1,7 @@
+/// <reference path="../typings/index.d.ts" />
+
 import { User } from "discord.js";
-import { discriminatorArray } from "./constants/constants.js";
+import { discriminatorArray } from "../constants/constants.js";
 
 class PremiumUtils {
     constructor() {
@@ -23,7 +25,7 @@ class PremiumUtils {
     }
 
     /**
-     * Method to determine if a user probably has nitro
+     * Method to determine if a user probably has nitro based on their discriminator
      * @param {User} user - The target user
      */
     static probablyHasNitro(user) {
