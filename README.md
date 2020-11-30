@@ -20,10 +20,11 @@ client.once("ready", () => {
 
 client.on("message", message => {
     if (message.content === "!checkpremium") {
-        if (PremiumUtils.hasNitro(message.author))
+        if (PremiumUtils.hasNitro(message.author)) {
             message.channel.send("You have nitro!");
-        else
+        } else {
             message.channel.send("You probably don't have nitro!");
+        }
     }
 });
 
