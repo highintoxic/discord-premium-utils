@@ -10,7 +10,7 @@
 
 # What is this?
 
-A simple Node.js package to see if a user is subscribed to Discord Nitro!
+A simple Node.js package to use with discord.js to see if a user is subscribed to [Discord Nitro](https://discord.com/nitro)!
 
 # Installation
 
@@ -20,25 +20,38 @@ A simple Node.js package to see if a user is subscribed to Discord Nitro!
 
 ```js
 import { Client } from "discord.js";
-import PremiumUtils from "discord-premium-utils";
+import { hasNitro, probablyHasNitro, isBoosting } from "discord-premium-utils";
 
 const client = new Client();
 
-client.once("ready", () => {
+client.on("ready", () => {
     console.log("Client is logged in!");
 });
 
 client.on("message", message => {
-    if (message.content === "!checkpremium") {
-        if (PremiumUtils.hasNitro(message.author)) {
+    if (message.content === "!checknitro") {
+        if (hasNitro(message.author)) {
             message.channel.send("You have nitro!");
-        } else if (PremiumUtils.probablyHasNitro(message.author)) {
+        } else if (probablyHasNitro(message.author)) {
             message.channel.send("You probably have nitro!");
         } else {
             message.channel.send("You probably don't have nitro!");
+        }
+    }
+
+    if (message.content === "!checkboosting") {
+        if (isBoosting(client, message.author)) {
+            message.channel.send("You are server boosting!");
+        } else {
+            message.channel.send("You are probably not server boosting!");
         }
     }
 });
 
 client.login("token");
 ```
+
+# Notes
+
+* This module only works with discord.js
+* If a user does not meet any creteria which this module checks, it will return false, even if they have nitro, however if they meet any creteria, it's 100% sure they have nitro. With the probablyHasNitro method, it will also look if they have a common tag, if someone without nitro has that tag, it will still return true.
