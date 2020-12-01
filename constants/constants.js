@@ -17,6 +17,4 @@ let discriminatorArray = [
     "9999"
 ]
 
-export {
-    discriminatorArray
-}
+export { discriminatorArray }

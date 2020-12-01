@@ -5,7 +5,7 @@ import { hasNitro, probablyHasNitro, isBoosting } from "discord-premium-utils";
 
 const client = new Client();
 
-client.once("ready", () => {
+client.on("ready", () => {
     console.log("Client is logged in!");
 });
 
@@ -18,11 +18,13 @@ client.on("message", message => {
         } else {
             message.channel.send("You probably don't have nitro!");
         }
-    } else if (message.content === "!checkboosting") {
+    }
+
+    if (message.content === "!checkboosting") {
         if (isBoosting(client, message.author)) {
-            message.channel.send("You are boosting!");
+            message.channel.send("You are server boosting!");
         } else {
-            message.channel.send("You are probably not boosting!");
+            message.channel.send("You are probably not server boosting!");
         }
     }
 });

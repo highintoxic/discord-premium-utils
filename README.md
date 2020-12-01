@@ -54,4 +54,4 @@ client.login("token");
 # Notes
 
 * This module only works with discord.js
-* If a user does not meet any creteria which this module checks, it will return false, even if they have nitro, however if they meet any creteria, it's 100% sure they have nitro. With the probablyHasNitro method, it will also look if they have a common tag, if someone without nitro has that tag, it will still return true.
+* If a user does not meet any creteria which this module checks, it will return false, even if they have nitro, however if they meet any creteria, it's 100% sure they have nitro. With the `probablyHasNitro` method, it will also look if they have a common tag, if someone without nitro has that tag, it will still return true.
