@@ -1,4 +1,4 @@
-let discriminatorArray = [
+const discriminatorArray = [
     "0001",
     "0420",
     "1000",
@@ -17,4 +17,6 @@ let discriminatorArray = [
     "9999"
 ]
 
-export { discriminatorArray }
+module.exports = {
+    discriminatorArray
+}

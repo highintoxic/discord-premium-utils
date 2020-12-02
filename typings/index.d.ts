@@ -1,6 +1,9 @@
 import { Client, User } from "discord.js";
 
 declare module "discord-premium-utils" {
+    /**
+     * A simple Node.js package to see if a user is subscribed to Discord Nitro!
+     */
     export class PremiumUtils {
         /**
          * This class may not be instantiated.
@@ -31,5 +34,10 @@ declare module "discord-premium-utils" {
          * @example isBoosting(client, message.author);
          */
         public static isBoosting(client: Client, user: User): boolean;
+
+        /**
+         * The version of the package
+         */
+        readonly get version(): string;
     }
 }

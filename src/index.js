@@ -1,8 +1,11 @@
 /// <reference path="../typings/index.d.ts" />
 
-import { Client, User } from "discord.js";
-import { discriminatorArray } from "../constants/constants.js";
+const { Client, User } = require("discord.js");
+const { discriminatorArray } = require("../constants/constants.js");
 
+/**
+ * A simple Node.js package to see if a user is subscribed to Discord Nitro!
+ */
 class PremiumUtils {
     /**
      * This class may not be instantiated.
@@ -76,14 +79,13 @@ class PremiumUtils {
         if (client.guilds.cache.filter(guild => guild.member(user) && guild.member(user).premiumSince).size > 0) return true;
         return false;
     }
+
+    /**
+     * The version of the package
+     */
+    get version() {
+        return require("../package.json").version;
+    }
 }
 
-const { hasNitro, probablyHasNitro, isBoosting } = PremiumUtils;
-
-export {
-    hasNitro,
-    probablyHasNitro,
-    isBoosting
-}
-
-export default PremiumUtils;
+module.exports = PremiumUtils;
