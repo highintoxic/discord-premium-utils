@@ -17,6 +17,4 @@ const discriminatorArray = [
     "9999"
 ]
 
-module.exports = {
-    discriminatorArray
-}
+module.exports.discriminatorArray = discriminatorArray;

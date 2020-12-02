@@ -1,4 +1,4 @@
-import PremiumUtils from '../src/index.js';
+import PremiumUtils from "../src/index.js";
 
 export default PremiumUtils;
 

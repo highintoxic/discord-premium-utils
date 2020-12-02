@@ -82,8 +82,9 @@ class PremiumUtils {
 
     /**
      * The version of the package
+     * @readonly
      */
-    get version() {
+    static get version() {
         return require("../package.json").version;
     }
 }

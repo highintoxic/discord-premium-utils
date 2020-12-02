@@ -38,7 +38,7 @@ declare module "discord-premium-utils" {
         /**
          * The version of the package
          */
-        readonly get version(): string;
+        public static readonly version: string;
     }
 
     export = PremiumUtils;
