@@ -8,17 +8,29 @@
   </p>
 </div>
 
-# What is this?
+## Table of contents
+
+- [About](#about)
+- [Installation](#installation)
+- [Importing](#importing)
+  - [CommonJS](#commonjs)
+  - [ES6](#es6)
+- [Example](#example)
+
+## About
 
 A simple Node.js package to use with discord.js to see if a user is subscribed to [Discord Nitro](https://discord.com/nitro)!
 
-# Installation
+## Installation
+
+* Node.js 12.0.0 or newer is required.
+* [discord.js](https://www.npmjs.com/package/discord.js) is required .
 
 `npm install discord-premium-utils`
 
-# Importing
+## Importing
 
-## CommonJS
+### CommonJS
 ```js
 const PremiumUtils = require("discord-premium-utils");
 
@@ -26,7 +38,7 @@ const PremiumUtils = require("discord-premium-utils");
 const { hasNitro, probablyHasNitro, isBoosting } = require("discord-premium-utils");
 ```
 
-## ES6
+### ES6
 ```js
 import PremiumUtils from "discord-premium-utils";
 
@@ -34,7 +46,7 @@ import PremiumUtils from "discord-premium-utils";
 import { hasNitro, probablyHasNitro, isBoosting } from "discord-premium-utils";
 ```
 
-# Example
+## Example
 
 ```js
 import { Client } from "discord.js";
@@ -68,8 +80,3 @@ client.on("message", message => {
 
 client.login("token");
 ```
-
-# Notes
-
-* This module only works with discord.js
-* If a user does not meet any creteria which this module checks, it will return false, even if they have nitro, however if they meet any creteria, it's 100% sure they have nitro. With the probablyHasNitro method, it will also look if they have a common tag, if someone without nitro has that tag, it will still return true.
