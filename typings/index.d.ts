@@ -1,7 +1,7 @@
 import { Client, User } from "discord.js";
 
 declare module "discord-premium-utils" {
-    class PremiumUtils {
+    export class PremiumUtils {
         /**
          * This class may not be instantiated.
          */
@@ -32,6 +32,4 @@ declare module "discord-premium-utils" {
          */
         public static isBoosting(client: Client, user: User): boolean;
     }
-
-    export = PremiumUtils;
 }

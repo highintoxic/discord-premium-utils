@@ -28,7 +28,7 @@ class PremiumUtils {
         if (user.flags && (user.flags.has("DISCORD_EMPLOYEE") || user.flags.has("PARTNERED_SERVER_OWNER"))) return true;
         if (user.presence.activities[0] && user.presence.activities.filter(activity => activity.emoji && activity.emoji.id).length > 0) return true;
 
-        const animatedEmojiCheck = /<a:[^:\s]+:[0-9]+>)+/g;
+        const animatedEmojiCheck = /(<a:[^:\s]+:[0-9]+>)+/g;
 
         if (user.lastMessage && user.lastMessage.content && animatedEmojiCheck.test(user.lastMessage.content)) return true;
 
