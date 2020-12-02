@@ -4,7 +4,7 @@ declare module "discord-premium-utils" {
     /**
      * A simple Node.js package to see if a user is subscribed to Discord Nitro!
      */
-    export class PremiumUtils {
+    class PremiumUtils {
         /**
          * This class may not be instantiated.
          */
@@ -40,4 +40,6 @@ declare module "discord-premium-utils" {
          */
         readonly get version(): string;
     }
+
+    export = PremiumUtils;
 }
