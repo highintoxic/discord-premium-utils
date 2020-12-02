@@ -21,22 +21,16 @@ A simple Node.js package to use with discord.js to see if a user is subscribed t
 ## CommonJS
 ```js
 const PremiumUtils = require("discord-premium-utils");
-```
 
-Or
-
-```js
+// OR
 const { hasNitro, probablyHasNitro, isBoosting } = require("discord-premium-utils");
 ```
 
 ## ES6
 ```js
 import PremiumUtils from "discord-premium-utils";
-```
 
-Or
-
-```js
+// OR
 import { hasNitro, probablyHasNitro, isBoosting } from "discord-premium-utils";
 ```
 
@@ -73,14 +67,6 @@ client.on("message", message => {
 });
 
 client.login("token");
-```
-
-# Import with CommonJS
-```js
-const PremiumUtils = require("discord-premium-utils");
-
-// if you want to access the function without having to refer to the class every time
-const { hasNitro, probablyHasNitro, isBoosting } = require("discord-premium-utils");
 ```
 
 # Notes
