@@ -1,6 +1,7 @@
 const discriminatorArray = [
     "0001",
     "0420",
+    "0666",
     "1000",
     "1111",
     "1234",
@@ -17,4 +18,6 @@ const discriminatorArray = [
     "9999"
 ]
 
-module.exports.discriminatorArray = discriminatorArray;
+module.exports = {
+    discriminatorArray
+}
