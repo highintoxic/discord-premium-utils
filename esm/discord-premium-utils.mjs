@@ -6,5 +6,6 @@ export const {
     hasNitro,
     probablyHasNitro,
     isBoosting,
-    version
+    version,
+    discordjs_version
 } = PremiumUtils;
