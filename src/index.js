@@ -93,6 +93,14 @@ class PremiumUtils {
     static get version() {
         return require("../package.json").version;
     }
+
+    /**
+     * The version of discord.js this package is using
+     * @readonly
+     */
+    static get discordjs_version() {
+        return require("../package.json").devDependencies["discord.js"].slice(1);
+    }
 }
 
 module.exports = PremiumUtils;

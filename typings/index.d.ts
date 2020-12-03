@@ -36,6 +36,11 @@ declare module "discord-premium-utils" {
          * The version of the package
          */
         public static readonly version: string;
+
+        /**
+         * The version of discord.js this package is using
+         */
+        public static readonly discordjs_version: string;
     }
 
     export = PremiumUtils;
