@@ -14,7 +14,6 @@ declare module "discord-premium-utils" {
          * Method to see if a user has nitro based on some creteria
          * @param user - The target user
          * @returns Returns `true` if one of the criteria of this method is met
-         * @example hasNitro(message.author);
          */
         public static hasNitro(user: User): boolean;
 
@@ -22,7 +21,6 @@ declare module "discord-premium-utils" {
          * Method to see if a user probably has nitro based on the previous method and their discriminator
          * @param user - The target user
          * @returns Returns `true` if one of the criteria of this or the previous method is met
-         * @example probablyHasNitro(message.author);
          */
         public static probablyHasNitro(user: User): boolean;
         
@@ -31,7 +29,6 @@ declare module "discord-premium-utils" {
          * @param client - The client to check the mutual boosting servers with
          * @param user - The target user
          * @returns Returns `true` if the target user is boosting any mutual server with the specified client
-         * @example isBoosting(client, message.author);
          */
         public static isBoosting(client: Client, user: User): boolean;
 
