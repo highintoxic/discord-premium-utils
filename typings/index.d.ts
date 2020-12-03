@@ -1,6 +1,6 @@
-import { Client, User } from "discord.js";
-
 declare module "discord-premium-utils" {
+    import { Client, User } from "discord.js";
+
     /**
      * A simple Node.js package to see if a user is subscribed to Discord Nitro!
      */
