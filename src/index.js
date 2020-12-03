@@ -27,6 +27,8 @@ class PremiumUtils {
             throw new Error("No valid user was provided");
         }
 
+        if (user.bot) return false;
+
         if (user.avatar && user.avatar.startsWith("a_")) return true;
         if (user.flags && (user.flags.has("DISCORD_EMPLOYEE") || user.flags.has("PARTNERED_SERVER_OWNER"))) return true;
         if (user.presence.activities[0] && user.presence.activities.filter(activity => activity.emoji && activity.emoji.id).length > 0) return true;
@@ -50,6 +52,8 @@ class PremiumUtils {
         } else if (!user.id || !user.discriminator) {
             throw new Error("No valid user was provided");
         }
+
+        if (user.bot) return false;
 
         if (this.hasNitro(user)) return true;
         if (discriminatorArray.includes(user.discriminator)) return true;
@@ -75,6 +79,8 @@ class PremiumUtils {
         } else if (!user.id) {
             throw new Error("No valid user was provided");
         }
+
+        if (user.bot) return false;
 
         if (client.guilds.cache.filter(guild => guild.member(user) && guild.member(user).premiumSince).size > 0) return true;
         return false;
