@@ -8,7 +8,7 @@ declare module "discord-premium-utils" {
         /**
          * This class may not be instantiated.
          */
-        constructor()
+        constructor();
 
         /**
          * Method to see if a user has nitro based on some creteria
