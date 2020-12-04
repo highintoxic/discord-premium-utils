@@ -5,6 +5,7 @@
   <p>
     <a href="https://www.npmjs.com/package/discord-premium-utils"><img src="https://img.shields.io/npm/v/discord-premium-utils.svg?maxAge=3600" alt="NPM version" /></a>
     <a href="https://www.npmjs.com/package/discord-premium-utils"><img src="https://img.shields.io/npm/dt/discord-premium-utils.svg?maxAge=3600" alt="NPM downloads" /></a>
+    <a href="https://david-dm.org/thehackerboi69github/discord-premium-utils"><img src="https://img.shields.io/david/thehackerboi69github/discord-premium-utils.svg?maxAge=3600" alt="Dependencies" /></a>
   </p>
 </div>
 
