@@ -1,5 +1,3 @@
-/// <reference path="../typings/index.d.ts" />
-
 const { Client, User } = require("discord.js");
 const { discriminatorArray } = require("../constants/constants.js");
 
