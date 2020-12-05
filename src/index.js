@@ -97,7 +97,7 @@ class PremiumUtils {
      * @readonly
      */
     static get discordjs_version() {
-        return require("../package.json").devDependencies["discord.js"].slice(1);
+        return require("../package.json").dependencies["discord.js"].slice(1);
     }
 }
 
