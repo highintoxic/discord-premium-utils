@@ -71,7 +71,7 @@ client.on("message", message => {
     }
 
     if (message.content === "!checkboosting") {
-        if (isBoosting(client, message.author)) {
+        if (isBoosting(message.author)) {
             message.channel.send("You are server boosting!");
         } else {
             message.channel.send("You are probably not server boosting!");
