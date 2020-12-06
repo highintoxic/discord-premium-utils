@@ -1,6 +1,6 @@
 {
   "name": "discord-premium-utils",
-  "version": "2.0.7",
+  "version": "2.1.0",
   "description": "A simple Node.js package to see if a user is subscribed to Discord Nitro!",
   "main": "src/index.js",
   "types": "typings/index.d.ts",
