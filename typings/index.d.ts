@@ -1,5 +1,5 @@
 declare module "discord-premium-utils" {
-    import { Client, User } from "discord.js";
+    import { User } from "discord.js";
 
     /**
      * A simple Node.js package to see if a user is subscribed to Discord Nitro!
@@ -25,12 +25,11 @@ declare module "discord-premium-utils" {
         public static probablyHasNitro(user: User): boolean;
         
         /**
-         * A method to see if a user is server boosting based on if they are boosting any mutual servers with the specified client
-         * @param client - The client to check the mutual boosting servers with
+         * A method to see if a user is server boosting based on if they are boosting any mutual servers with the client they are instantiated with
          * @param user - The target user
-         * @returns Returns `true` if the target user is boosting any mutual server with the specified client
+         * @returns Returns `true` if the target user is boosting any mutual server with the client they are instantiated with
          */
-        public static isBoosting(client: Client, user: User): boolean;
+        public static isBoosting(user: User): boolean;
 
         /**
          * The version of the package
