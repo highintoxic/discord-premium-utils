@@ -21,7 +21,7 @@ class PremiumUtils {
     static hasNitro(user) {
         if (!user) {
             throw new Error("No user was provided");
-        } else if (!user.id) {
+        } else if (!user.id || !user.presence) {
             throw new Error("No valid user was provided");
         }
 
@@ -33,7 +33,7 @@ class PremiumUtils {
 
         const animatedEmojiCheck = /(<a:[^:\s]+:[0-9]+>)+/g;
 
-        if (user.lastMessage && user.lastMessage.content && animatedEmojiCheck.test(user.lastMessage.content)) return true;
+        if (user.lastMessage && (user.lastMessage.createdAt.getMonth() === new Date().getMonth() && user.lastMessage.createdAt.getDate() === new Date().getDate()) && user.lastMessage.content && animatedEmojiCheck.test(user.lastMessage.content)) return true;
 
         return false;
     }
@@ -54,6 +54,7 @@ class PremiumUtils {
         if (user.bot) return false;
 
         if (this.hasNitro(user)) return true;
+        if (this.isBoosting(user)) return true;
         if (discriminatorArray.includes(user.discriminator)) return true;
         return false;
     }
@@ -79,6 +80,7 @@ class PremiumUtils {
 
     /**
      * The version of the package
+     * @type {string}
      * @readonly
      */
     static get version() {
@@ -87,6 +89,7 @@ class PremiumUtils {
 
     /**
      * The version of discord.js this package is using
+     * @type {string}
      * @readonly
      */
     static get discordjs_version() {
