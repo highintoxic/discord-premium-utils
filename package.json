@@ -33,11 +33,11 @@
     ".": [
       {
         "require": "./src/index.js",
-        "import": "./esm/discord-premium-utils.mjs"
+        "import": "./esm/index.mjs"
       },
       "./src/index.js"
     ],
-    "./esm": "./esm/discord-premium-utils.mjs"
+    "./esm": "./esm/index.mjs"
   },
   "devDependencies": {}
 }
