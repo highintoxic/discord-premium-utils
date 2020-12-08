@@ -24,8 +24,8 @@ A simple Node.js package to use with discord.js to see if a user is subscribed t
 
 ## Installation
 
-* [Node.js](https://nodejs.org/) 12.0.0 or newer is required.
-* [discord.js](https://www.npmjs.com/package/discord.js) is required.
+* [Node.js](https://nodejs.org/) is required.
+* [discord.js](https://www.npmjs.com/package/discord.js) 12.0.0 or newer is required.
 
 `npm install discord-premium-utils`
 
