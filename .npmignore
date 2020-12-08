@@ -1,5 +1,8 @@
 # Packages
 node_modules/
 
+# Miscellaneous
+test/
+
 # NPM ignore
 .gitignore
