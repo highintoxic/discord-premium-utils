@@ -53,13 +53,16 @@ import { hasNitro, probablyHasNitro, isBoosting } from "discord-premium-utils";
 import { Client } from "discord.js";
 import { hasNitro, probablyHasNitro, isBoosting } from "discord-premium-utils";
 
-const client = new Client();
+const client = new Client({
+	intents: 32767,
+	partials: ['MESSAGE', 'CHANNEL', 'REACTION'],
+});
 
 client.on("ready", () => {
     console.log("Client is logged in!");
 });
 
-client.on("message", message => {
+client.on("messageCreate", message => {
     if (message.content === "!checknitro") {
         if (hasNitro(message.author)) {
             message.channel.send("You have nitro!");
